@@ -20,5 +20,7 @@ public class VideoRequest {
         this.price = price;
     }
 
+    public VideoRequest() {
+    }
 }
 

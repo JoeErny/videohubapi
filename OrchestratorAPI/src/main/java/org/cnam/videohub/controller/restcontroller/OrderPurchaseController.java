@@ -16,13 +16,12 @@ public class OrderPurchaseController {
     @Autowired
     OrderPurchaseService orderPurchaseService;
 
-    @PostMapping("/makeandcontinue")
+    @PostMapping("/purchase_existing_order")
     @ResponseBody
-    public ResponseEntity<ContinueToPurchaseResponse> makeOrderAndContinueToPayment(@RequestBody OrderRequest orderRequest) {
+    public ResponseEntity<OrderPurchaseResponse> purchaseExistingOrder(@RequestBody OrderPurchaseRequest orderPurchaseRequest) {
 
-        return new ResponseEntity<>(orderPurchaseService.makeOrderAndContinueToPayment(orderRequest), HttpStatus.OK);
+        return new ResponseEntity<>(orderPurchaseService.purchaseOrder(orderPurchaseRequest), HttpStatus.OK);
     }
-
 
     @PostMapping("/make")
     @ResponseBody

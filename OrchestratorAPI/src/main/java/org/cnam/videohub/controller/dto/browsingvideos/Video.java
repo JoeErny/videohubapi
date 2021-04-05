@@ -14,4 +14,7 @@ public class Video {
         this.category_id=category_id;
         this.price = price;
     }
+
+    public Video() {
+    }
 }

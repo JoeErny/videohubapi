@@ -11,4 +11,7 @@ public class BrowsingRequest {
     public BrowsingRequest(@JsonProperty("category_id") Long category_id) {
         this.categoryId = category_id;
     }
+
+    public BrowsingRequest() {
+    }
 }

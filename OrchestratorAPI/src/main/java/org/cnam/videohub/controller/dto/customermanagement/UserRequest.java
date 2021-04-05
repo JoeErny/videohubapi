@@ -16,4 +16,7 @@ public class UserRequest {
         this.mail = mail;
         this.fidelity_points = fidelity_points;
     }
+
+    public UserRequest() {
+    }
 }

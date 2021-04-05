@@ -10,4 +10,6 @@ public List<Video> videos_found;
         this.videos_found = videos;
     }
 
+    public BrowsingResponse() {
+    }
 }

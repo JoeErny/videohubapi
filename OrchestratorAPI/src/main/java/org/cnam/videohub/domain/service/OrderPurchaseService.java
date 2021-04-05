@@ -28,7 +28,6 @@ public class OrderPurchaseService {
         return restTemplate.postForObject(purchaseOrderUrl, orderPurchaseRequestHttp, OrderPurchaseResponse.class);
     }
 
-
     public OrderResponse makeOrder(MakeOrderRequest makeOrderRequest) {
 
         OrderRequest orderRequest = new OrderRequest(new Date(), browsingVideoService.getVideoById(makeOrderRequest.video_id).price, makeOrderRequest.video_id, makeOrderRequest.user_id);
@@ -36,13 +35,5 @@ public class OrderPurchaseService {
         HttpEntity<OrderRequest> orderRequestHttp = new HttpEntity<>(orderRequest);
         return restTemplate.postForObject(makeOrderUrl, orderRequestHttp, OrderResponse.class);
     }
-
-    public ContinueToPurchaseResponse makeOrderAndContinueToPayment(OrderRequest orderRequest) {
-
-//        OrderResponse orderResponse = makeOrder(orderRequest);
-//        return new ContinueToPurchaseResponse("Your order has been created !", orderResponse, purchaseOrderUrl, new OrderPurchaseRequest(orderResponse.id, 200.0));
-        return null;
-    }
-
 
 }

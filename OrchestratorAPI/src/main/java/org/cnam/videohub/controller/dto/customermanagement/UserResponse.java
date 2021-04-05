@@ -18,4 +18,7 @@ public class UserResponse {
 
 
     }
+
+    public UserResponse() {
+    }
 }

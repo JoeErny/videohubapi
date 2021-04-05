@@ -18,4 +18,6 @@ public class UserRegistrationRequest {
 
         }
 
+    public UserRegistrationRequest() {
+    }
 }
