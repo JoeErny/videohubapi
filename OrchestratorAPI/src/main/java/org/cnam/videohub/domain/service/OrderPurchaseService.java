@@ -17,7 +17,7 @@ public class OrderPurchaseService {
     @Autowired
     private BrowsingVideoService browsingVideoService;
 
-    private final static String purchaseOrderUrl = "http://localhost:8083/videohub/rest/orderpurchase/create/";
+    private final static String purchaseOrderUrl = "http://localhost:8083/videohub/rest/orderpurchase/create";
     private final static String makeOrderUrl = "http://localhost:8083/videohub/rest/order/create";
 
 

@@ -21,4 +21,7 @@ public class OrderPurchaseResponse {
         this.fidelityPointsAdded = fidelityPointsAdded;
         this.getFidelityPointsTotal = getFidelityPointsTotal;
     }
+
+    public OrderPurchaseResponse() {
+    }
 }

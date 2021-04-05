@@ -27,7 +27,6 @@ public class OrderPurchaseService {
     private final static String convertAmountToFidelityPointsURL = "http://localhost:8080/videohub/rest/fidelity/assign_points/";
 
     public OrderPurchaseResult purchaseOrder(OrderToPurchase orderToPurchase) {
-        System.out.println(orderToPurchase.amount + "  rtgsrtbsrtbsrtbsh");
         Payment paymentMade = paymentService.createNewPayment(new PaymentToCreate(orderToPurchase.getOrderId(), orderToPurchase.getAmount()));
         RestTemplate restTemplate = new RestTemplate();
         HttpEntity<FidelityPointsAssignmentRequest> fidelityPointsAssignmentRequest = new HttpEntity<>(new FidelityPointsAssignmentRequest(orderService.getById(orderToPurchase.orderId).user_id, orderToPurchase.amount));

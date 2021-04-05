@@ -22,6 +22,8 @@ public class OrderPurchaseController {
     @ResponseBody
     public ResponseEntity<OrderPurchaseResponse> purchaseOrder(@RequestBody OrderPurchaseRequest orderPurchaseRequest) {
 
+
+
         OrderPurchaseResult orderPurchaseResult = orderPurchaseService.purchaseOrder(new OrderToPurchase(orderPurchaseRequest.getOrderId(), orderPurchaseRequest.getAmount()));
         OrderPurchaseResponse orderPurchaseResponse = new OrderPurchaseResponse(orderPurchaseResult.paymentId, orderPurchaseResult.orderId, orderPurchaseResult.date, orderPurchaseResult.amount, orderPurchaseResult.orderStatus, orderPurchaseResult.fidelityPointsAdded, orderPurchaseResult.getFidelityPointsTotal);
         return new ResponseEntity<>(orderPurchaseResponse, HttpStatus.OK);
