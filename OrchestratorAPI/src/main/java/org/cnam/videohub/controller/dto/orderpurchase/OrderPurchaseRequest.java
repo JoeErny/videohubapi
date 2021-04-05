@@ -9,9 +9,12 @@ public class OrderPurchaseRequest {
     Double amount;
 
     @JsonCreator
-    public OrderPurchaseRequest(@JsonProperty("order_id")  Long orderId, @JsonProperty("given_payment_amount")  Double amount) {
+    public OrderPurchaseRequest(@JsonProperty("order_id")  Long orderId, @JsonProperty("amount")  Double amount) {
         this.orderId = orderId;
         this.amount = amount;
+    }
+
+    public OrderPurchaseRequest() {
     }
 
     public Long getOrderId() {
